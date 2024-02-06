@@ -11,4 +11,7 @@ while True:
         print(f'The number was {number}.')
         break
     else:
-        guess = input('Incorrect, try again. ')
+        if int(guess) > number:
+            guess = input('Too high!, try again. ')
+        elif int(guess) < number:
+            guess = input('Too low! Try again. ')
